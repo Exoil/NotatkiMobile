@@ -47,7 +47,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "a/iSwnRZb+LHFk49hQOyThh/ZNC3vsbZsF65XwQIb863qF6msmhdQtxGXFL28Ob2NsCz/drEj28BJd/YPpLRBg==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -361,26 +361,23 @@
   },
   "packageFolders": {
     "C:\\Users\\Exoil\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Exoil\\Documents\\Resources\\NotatnikMobile\\NotatnikMobile\\NotatnikMobile\\NotatnikMobile.csproj",
+      "projectUniqueName": "E:\\Resources\\NotatkiMobile\\NotatnikMobile\\NotatnikMobile\\NotatnikMobile.csproj",
       "projectName": "NotatnikMobile",
-      "projectPath": "C:\\Users\\Exoil\\Documents\\Resources\\NotatnikMobile\\NotatnikMobile\\NotatnikMobile\\NotatnikMobile.csproj",
+      "projectPath": "E:\\Resources\\NotatkiMobile\\NotatnikMobile\\NotatnikMobile\\NotatnikMobile.csproj",
       "packagesPath": "C:\\Users\\Exoil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Exoil\\Documents\\Resources\\NotatnikMobile\\NotatnikMobile\\NotatnikMobile\\obj\\",
+      "outputPath": "E:\\Resources\\NotatkiMobile\\NotatnikMobile\\NotatnikMobile\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Exoil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"

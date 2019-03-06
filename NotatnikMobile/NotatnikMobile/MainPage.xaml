@@ -4,11 +4,17 @@
              xmlns:local="clr-namespace:NotatnikMobile"
              x:Class="NotatnikMobile.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Menu" Grid.Row="0" BackgroundColor="Red"/>
+        <Editor Grid.Row="1" BackgroundColor="WhiteSmoke"></Editor>
+        
+        
+        
+    </Grid>
 
 </ContentPage>

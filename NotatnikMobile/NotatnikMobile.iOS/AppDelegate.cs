@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Xamarin.Forms;
 using Foundation;
 using UIKit;
 
@@ -26,6 +26,19 @@ namespace NotatnikMobile.iOS
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+        public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations(UIApplication application, UIWindow forWindow)
+        {
+            switch (Device.Idiom)
+            {
+                case TargetIdiom.Phone:
+                    return UIInterfaceOrientationMask.Portrait;
+                case TargetIdiom.Tablet:
+                    return UIInterfaceOrientationMask.Portrait;
+                default:
+                    return UIInterfaceOrientationMask.Portrait;
+            }
         }
     }
 }

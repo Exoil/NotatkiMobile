@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28606.126
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotatnikMobile.Android", "NotatnikMobile\NotatnikMobile.Android\NotatnikMobile.Android.csproj", "{0FC6F60F-8A35-44BE-B251-B7D4D0E08F7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotatnikMobile.iOS", "NotatnikMobile\NotatnikMobile.iOS\NotatnikMobile.iOS.csproj", "{45C01C3A-B75F-44E2-8059-98401D3D6F30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotatnikMobile", "NotatnikMobile\NotatnikMobile\NotatnikMobile.csproj", "{360B3DE2-2C13-40D5-BCA7-26C3699A7DD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotatnikMobile", "NotatnikMobile\NotatnikMobile\NotatnikMobile.csproj", "{360B3DE2-2C13-40D5-BCA7-26C3699A7DD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -4,14 +4,22 @@
              xmlns:local="clr-namespace:NotatnikMobile"
              x:Class="NotatnikMobile.MainPage">
 
-    <Grid>
+    <Grid x:Name="MainMenu">
         <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-        <Label Text="Menu" Grid.Row="0" BackgroundColor="Red"/>
-        <Editor Grid.Row="1" BackgroundColor="WhiteSmoke"></Editor>
+        <Button Text="Op"  Grid.Row="0" Grid.Column="0" Clicked="ShowOptions"></Button>
+        <Entry x:Name= "Title" Text="FileName" Grid.Row="0" Grid.Column="1"  BackgroundColor="Red"/>
+        <Editor x:Name="Edytor" Text=" " Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" BackgroundColor="Gray"></Editor>
         
         
         

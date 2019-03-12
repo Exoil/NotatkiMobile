@@ -45,6 +45,8 @@ namespace NotatnikMobile.Core
         public async void LoadFile(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SavedNotes(ref toReplace, ref title));
+            IsVisible = false;
+            toReplace.IsEnabled = true;
         }
 
         public void SaveFile(object sender, EventArgs e)

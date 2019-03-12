@@ -17,7 +17,7 @@ namespace NotatnikMobile
 
         Editor toLoad;
         Entry fileName;
-
+        SavedNotes reference;
         public SavedNotes ()
         {
             var fileNote = new  NoteFile();
@@ -29,6 +29,8 @@ namespace NotatnikMobile
         }
         public SavedNotes(ref Editor toLoad, ref Entry label)
         {
+
+            reference = this;
             var fileNote = new NoteFile();
             this.toLoad = toLoad;
             fileName = label;
@@ -39,14 +41,36 @@ namespace NotatnikMobile
             FileList.ItemSelected += (sender, e) =>
              {
                  var notatka = (Notes)e.SelectedItem;
-                 this.fileName.Text = notatka.fileName;
+                 if (notatka != null)
+                 {
+                     if (notatka.fileName == null)
+                     {
+                         fileName.Text = " ";
 
-                 var text = System.IO.File.ReadAllText(notatka.path);
+                     }
+                     else
+                     {
+                         this.fileName.Text = notatka.fileName;
+                     }
 
-                 this.toLoad.Text = text;
 
-                 FileList.SelectedItem = null;
+                     var text = System.IO.File.ReadAllText(notatka.path);
 
+                     if (text == null)
+                     {
+                         this.toLoad.Text = "";
+                     }
+                     else
+                     {
+                         this.toLoad.Text = text;
+                     }
+
+
+                     FileList.SelectedItem = null;
+                     Navigation.RemovePage(reference);
+
+                 }
+                 //    
              };
 
 

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,13 @@ using Xamarin.Forms.Xaml;
 namespace NotatnikMobile
 {
   
-    public partial class SavedNotes : ContentPage
+    public partial class DeleteNotes : ContentPage
 	{
 
         Editor toLoad;
         Entry fileName;
-        SavedNotes reference;
-        public SavedNotes ()
+        DeleteNotes reference;
+        public DeleteNotes()
         {
             var fileNote = new  NoteFile();
          
@@ -27,7 +28,7 @@ namespace NotatnikMobile
             FileList.ItemsSource = fileNote.LoadFilesToList();
 
         }
-        public SavedNotes(ref Editor toLoad, ref Entry label)
+        public DeleteNotes(ref Editor toLoad, ref Entry label)
         {
 
             reference = this;
@@ -43,39 +44,14 @@ namespace NotatnikMobile
                  var notatka = (Notes)e.SelectedItem;
                  if (notatka != null)
                  {
-                     if (notatka.fileName == null)
-                     {
-                         fileName.Text = " ";
 
-                     }
-                     else
-                     {
-                         this.fileName.Text = notatka.fileName;
-                     }
-
-
-                     var text = System.IO.File.ReadAllText(notatka.path);
-
-                     if (text == null)
-                     {
-                         this.toLoad.Text = "";
-                     }
-                     else
-                     {
-                         this.toLoad.Text = text;
-                     }
-
-
+                     File.Delete(notatka.path);            
                      FileList.SelectedItem = null;
-                     Navigation.RemovePage(reference);
+                     FileList.ItemsSource = fileNote.LoadFilesToList();
 
                  }
                  //    
              };
-
-          
-
-         
 
 
         }

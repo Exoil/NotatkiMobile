@@ -9,6 +9,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -19,7 +20,7 @@
 
         <Button Text="Op"  Grid.Row="0" Grid.Column="0" Clicked="ShowOptions"></Button>
         <Entry x:Name= "Title" Text="FileName" Grid.Row="0" Grid.Column="1"  BackgroundColor="Red"/>
-        <Editor x:Name="Edytor" Text=" " Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" BackgroundColor="Gray"></Editor>
+        <Editor x:Name="Edytor" Text=" " Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" BackgroundColor="Gray"></Editor>
         
         
         

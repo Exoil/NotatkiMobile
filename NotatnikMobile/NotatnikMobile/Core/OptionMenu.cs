@@ -7,7 +7,7 @@ namespace NotatnikMobile.Core
 {
     public class OptionMenu : StackLayout
     {
-        Button load, save, back;
+        Button load, save, back, delete;
 
         public Editor toReplace;
         public Entry title;
@@ -24,17 +24,20 @@ namespace NotatnikMobile.Core
             back = new Button();
             back.Text = "Back";
             back.Clicked += BackEdit;
-
+            delete = new Button();
+            delete.Text = "Delete";
+            delete.Clicked += DeleteFile;
 
 
             Grid.SetRow(this, 0);
-            Grid.SetRowSpan(this, 3);
+            Grid.SetRowSpan(this, 4);
             Grid.SetColumn(this, 0);
             Grid.SetColumnSpan(this, 2);
 
             this.Children.Add(save);
             this.Children.Add(load);
             this.Children.Add(back);
+            this.Children.Add(delete);
             this.BackgroundColor = Color.White;
             IsVisible = false;
 
@@ -62,6 +65,14 @@ namespace NotatnikMobile.Core
 
         public void BackEdit(object sender, EventArgs e)
         {
+            IsVisible = false;
+            toReplace.IsEnabled = true;
+        }
+
+
+        public async void DeleteFile(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DeleteNotes(ref toReplace, ref title));
             IsVisible = false;
             toReplace.IsEnabled = true;
         }
